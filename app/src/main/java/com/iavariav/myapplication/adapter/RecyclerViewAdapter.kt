@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.iavariav.myapplication.R
 import com.iavariav.myapplication.model.Item
 
@@ -18,16 +19,12 @@ class RecyclerViewAdapter(private val context: Context,
     :RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>()
 // RecyclerView nya kita extend ke parrent(orang tua) nya RecyclerView yaitu RecyclerViewAdapter
 {
-    class ViewHolder(view: View) :
-    RecyclerView.ViewHolder(view){
-        private val name = view.findViewById<TextView>(R.id.tv_name_team)
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
+        val name = view.findViewById<TextView>(R.id.tv_name_team)
         // tv_name_team diganti dengan variabel name, kemudian mencari view dari id
         // list_item.xml bernama tv_name_team
-        private val image = view.findViewById<ImageView>(R.id.iv_team);
+        val image = view.findViewById<ImageView>(R.id.iv_team);
 
-        fun bindItem(item: Item){
-            name.text = item.name //name.setText = item.name;
-        }
     }
 
     override fun onCreateViewHolder(
@@ -43,7 +40,9 @@ class RecyclerViewAdapter(private val context: Context,
     }
 
     override fun onBindViewHolder(holder: RecyclerViewAdapter.ViewHolder, position: Int) {
-        holder.bindItem(items[position])
+        Glide.with(context).load(items.get(position).image).into(holder.image)
+        holder.name.text = items.get(position).name
+
     }
 
 }
