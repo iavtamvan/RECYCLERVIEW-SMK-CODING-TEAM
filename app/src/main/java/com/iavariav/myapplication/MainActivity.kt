@@ -6,6 +6,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.iavariav.myapplication.adapter.RecyclerViewAdapter
+import com.iavariav.myapplication.fragment.MovieFragment
 import com.iavariav.myapplication.fragment.TeamFragment
 import com.iavariav.myapplication.model.Item
 import com.ogaclejapan.smarttablayout.SmartTabLayout
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = FragmentPagerItemAdapter(
             supportFragmentManager, FragmentPagerItems.with(this)
                 .add("Team", TeamFragment::class.java)
-                .add("Movie", TeamFragment::class.java)
+                .add("Movie", MovieFragment::class.java)
                 .create()
         )
         val viewPager = findViewById<View>(R.id.viewpager) as ViewPager

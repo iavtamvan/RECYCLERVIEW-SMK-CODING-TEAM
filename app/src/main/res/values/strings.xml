@@ -23,6 +23,27 @@
         <item>@drawable/img_arsenal</item>
     </array>
 
+    <string-array name="movie_name">
+        <item>SIN</item>
+        <item>Danur</item>
+        <item>Joker</item>
+        <item>Joker</item>
+        <item>Joker</item>
+        <item>Joker</item>
+        <item>Joker</item>
+        <item>Joker</item>
+    </string-array>
+
+    <array name="movie_image">
+        <item>@drawable/img_barca</item>
+        <item>@drawable/img_madrid</item>
+        <item>@drawable/img_bayern</item>
+        <item>@drawable/img_city</item>
+        <item>@drawable/img_mu</item>
+        <item>@drawable/img_chelsea</item>
+        <item>@drawable/img_acm</item>
+        <item>@drawable/img_arsenal</item>
+    </array>
+
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
