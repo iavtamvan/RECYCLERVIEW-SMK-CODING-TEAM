@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import com.iavariav.myapplication.R
 import com.iavariav.myapplication.adapter.RecyclerViewAdapter
@@ -48,8 +49,9 @@ class TeamFragment : Fragment() {
 
     fun initView(view: View){
         initData()
-        rv_list.layoutManager = LinearLayoutManager(activity)
-        rv_list.adapter = activity?.let { RecyclerViewAdapter(it, items) }
+        val rv = view.findViewById<RecyclerView>(R.id.rv_list)
+        rv.layoutManager = LinearLayoutManager(activity)
+        rv.adapter = activity?.let { RecyclerViewAdapter(it, items) }
     }
 
 
