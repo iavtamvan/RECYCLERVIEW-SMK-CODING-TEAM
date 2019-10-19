@@ -6,6 +6,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.iavariav.myapplication.adapter.RecyclerViewAdapter
+import com.iavariav.myapplication.fragment.ImagePickerFragment
 import com.iavariav.myapplication.fragment.MovieFragment
 import com.iavariav.myapplication.fragment.TeamFragment
 import com.iavariav.myapplication.model.Item
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager, FragmentPagerItems.with(this)
                 .add("Team", TeamFragment::class.java)
                 .add("Movie", MovieFragment::class.java)
+                .add("ImagePicker", ImagePickerFragment::class.java)
                 .create()
         )
         val viewPager = findViewById<View>(R.id.viewpager) as ViewPager
