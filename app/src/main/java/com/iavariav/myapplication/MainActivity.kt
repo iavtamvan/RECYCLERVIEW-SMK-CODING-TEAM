@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         val adapter = FragmentPagerItemAdapter(
             supportFragmentManager, FragmentPagerItems.with(this)
                 .add("Team", TeamFragment::class.java)
-                .add("Movie", MovieFragment::class.java)
                 .add("ImagePicker", ImagePickerFragment::class.java)
                 .create()
         )
